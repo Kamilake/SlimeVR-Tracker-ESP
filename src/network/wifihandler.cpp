@@ -76,6 +76,7 @@ void WiFiNetwork::setUp() {
     wifiHandlerLogger.info("Setting up WiFi");
     WiFi.persistent(true);
     WiFi.mode(WIFI_STA);
+    WiFi.setPhyMode(WIFI_PHY_MODE_11G);
     WiFi.hostname("SlimeVR FBT Tracker");
     wifiHandlerLogger.info("Loaded credentials for SSID %s and pass length %d", WiFi.SSID().c_str(), WiFi.psk().length());
     setStaticIPIfDefined();
